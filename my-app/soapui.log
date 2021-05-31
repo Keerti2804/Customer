@@ -1,0 +1,71 @@
+2021-05-31 14:38:41,565 WARN  [SoapUI] Missing folder [C:\Users\KeertiSarode\Desktop\Customer\my-app\ext] for external libraries
+2021-05-31 14:38:41,741 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\KeertiSarode\soapui-settings.xml]
+2021-05-31 14:38:44,136 INFO  [WsdlProject] Loaded project from [file:/C:/Users/KeertiSarode/Desktop/Customer/my-app/CustomerProject-soapui-project.xml]
+2021-05-31 14:38:44,504 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [CustomerProject]
+2021-05-31 14:38:44,505 INFO  [SoapUITestCaseRunner] Running Project [CustomerProject], runType = SEQUENTIAL
+2021-05-31 14:38:44,519 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [Traditional Customer Property Transfer]
+2021-05-31 14:38:44,537 INFO  [SoapUITestCaseRunner] running step [Customer Creation Properties]
+2021-05-31 14:38:44,575 INFO  [SoapUITestCaseRunner] running step [Property Transfer]
+2021-05-31 14:38:44,779 INFO  [SoapUITestCaseRunner] running step [Create Customer]
+2021-05-31 14:38:46,319 INFO  [log] <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+   <env:Body>
+      <env:Fault>
+         <env:Code>
+            <env:Value>env:Sender</env:Value>
+         </env:Code>
+         <env:Reason>
+            <env:Text xml:lang="en">A customer with the same email address already exists in an associated website.</env:Text>
+         </env:Reason>
+      </env:Fault>
+   </env:Body>
+</env:Envelope>
+2021-05-31 14:38:46,335 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2021-05-31 14:38:46,335 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+2021-05-31 14:38:46,336 INFO  [SoapUITestCaseRunner] running step [CustomerID transfer]
+2021-05-31 14:38:46,342 INFO  [SoapUITestCaseRunner] running step [Retrieve Customer]
+2021-05-31 14:38:47,067 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2021-05-31 14:38:47,067 INFO  [SoapUITestCaseRunner] running step [Delete Customer]
+2021-05-31 14:38:47,731 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2021-05-31 14:38:47,731 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [Traditional Customer Property Transfer], time taken: 3178ms, status: FINISHED
+2021-05-31 14:38:47,738 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [PropertyExpansion]
+2021-05-31 14:38:47,739 INFO  [SoapUITestCaseRunner] running step [Customer Creation Properties]
+2021-05-31 14:38:47,740 INFO  [SoapUITestCaseRunner] running step [Script1]
+2021-05-31 14:38:47,769 INFO  [log] 
+2021-05-31 14:38:47,774 INFO  [log] Address is not available for customer
+2021-05-31 14:38:47,780 INFO  [SoapUITestCaseRunner] running step [Create Customer without Address]
+2021-05-31 14:38:48,628 INFO  [log] <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:ns1="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+   <env:Body>
+      <ns1:customerCustomerRepositoryV1SaveResponse>
+         <result>
+            <id>8475</id>
+            <groupId>1</groupId>
+            <createdAt>2021-05-31 09:08:47</createdAt>
+            <updatedAt>2021-05-31 09:08:47</updatedAt>
+            <createdIn>Default Store View</createdIn>
+            <dob>1994-05-19</dob>
+            <email>Keerti869.2@gmail.com</email>
+            <firstname>Keerti</firstname>
+            <lastname>Sarode</lastname>
+            <storeId>1</storeId>
+            <websiteId>1</websiteId>
+            <addresses/>
+            <disableAutoGroupChange>0</disableAutoGroupChange>
+            <extensionAttributes>
+               <isSubscribed>false</isSubscribed>
+            </extensionAttributes>
+         </result>
+      </ns1:customerCustomerRepositoryV1SaveResponse>
+   </env:Body>
+</env:Envelope>
+2021-05-31 14:38:48,657 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2021-05-31 14:38:48,657 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+2021-05-31 14:38:48,658 INFO  [SoapUITestCaseRunner] running step [Script3]
+2021-05-31 14:38:48,671 INFO  [log] 
+2021-05-31 14:38:48,672 INFO  [log] 5590
+2021-05-31 14:38:48,675 INFO  [log] Address is not available for customer
+2021-05-31 14:38:48,675 INFO  [SoapUITestCaseRunner] running step [Retrieve by CustomerId]
+2021-05-31 14:38:49,360 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2021-05-31 14:38:49,361 INFO  [SoapUITestCaseRunner] running step [Delete Customer]
+2021-05-31 14:38:50,212 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2021-05-31 14:38:50,213 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [PropertyExpansion], time taken: 2466ms, status: FINISHED
+2021-05-31 14:38:50,216 INFO  [SoapUITestCaseRunner] Project [CustomerProject] finished with status [FINISHED] in 5707ms

@@ -1,0 +1,2445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="25b88e0c-4be8-4c1a-8294-cc9360d4bb84" activeEnvironment="Default" name="CustomerProject" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" encryptionMode="Not encrypted" updated="3.8.0 2021-04-27T13:32:15Z" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="5b295f46-8a68-4a62-8cd6-a850d03e19cc" wsaVersion="NONE" name="customerAddressRepositoryV1Binding" type="wsdl" bindingName="{http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1}customerAddressRepositoryV1Binding" soapVersion="1_2" anonymous="optional" definition="file:/C:/Users/KeertiSarode/Documents/Reskill/Files/Project/SOAP%20API%20WSDL%20EndPoints/SOAP%20API%20WSDL%20EndPoints/customerAddressRepositoryV1.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/KeertiSarode/Documents/Reskill/Files/Project/SOAP%20API%20WSDL%20EndPoints/SOAP%20API%20WSDL%20EndPoints/customerAddressRepositoryV1.xml"><con:part><con:url>file:/C:/Users/KeertiSarode/Documents/Reskill/Files/Project/SOAP%20API%20WSDL%20EndPoints/SOAP%20API%20WSDL%20EndPoints/customerAddressRepositoryV1.xml</con:url><con:content><![CDATA[<definitions name="MagentoWSDL" targetNamespace="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <types>
+    <xsd:schema targetNamespace="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+      <xsd:element name="GenericFault" type="tns:GenericFault"/>
+      <xsd:complexType name="GenericFaultParameter">
+        <xsd:sequence>
+          <xsd:element name="key" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="value" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfGenericFaultParameter">
+        <xsd:annotation>
+          <xsd:documentation>An array of GenericFaultParameter items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="tns:GenericFaultParameter">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfGenericFaultParameter.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="WrappedError">
+        <xsd:sequence>
+          <xsd:element name="message" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="parameters" type="tns:ArrayOfGenericFaultParameter" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Message parameters.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfWrappedError">
+        <xsd:annotation>
+          <xsd:documentation>An array of WrappedError items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="tns:WrappedError">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfWrappedError.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GenericFault">
+        <xsd:sequence>
+          <xsd:element name="Trace" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Exception calls stack trace.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="Parameters" type="tns:ArrayOfGenericFaultParameter" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Additional exception parameters.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="WrappedErrors" type="tns:ArrayOfWrappedError" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Additional wrapped errors.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkDataImageContentInterface">
+        <xsd:annotation>
+          <xsd:documentation>Image Content data interface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="base64EncodedData" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Media data (base64 encoded content)</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="type" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>MIME type</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="name" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Image name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataRegionExtensionInterface">
+        <xsd:annotation>
+          <xsd:documentation>ExtensionInterface class for @see \Magento\Customer\Api\Data\RegionInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataRegionInterface">
+        <xsd:annotation>
+          <xsd:documentation>Customer address region interface.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="regionCode" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Region code</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="region" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Region</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="regionId" minOccurs="1" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Region id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="extensionAttributes" minOccurs="0" maxOccurs="1" type="tns:CustomerDataRegionExtensionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Existing extension attributes object or create a new one.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfString">
+        <xsd:annotation>
+          <xsd:documentation>An array of string items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfString.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataAddressExtensionInterface">
+        <xsd:annotation>
+          <xsd:documentation>ExtensionInterface class for @see \Magento\Customer\Api\Data\AddressInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkAttributeInterface">
+        <xsd:annotation>
+          <xsd:documentation>Interface for custom attribute value.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="attributeCode" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Attribute code</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="value" minOccurs="1" maxOccurs="1" type="xsd:anyType">
+            <xsd:annotation>
+              <xsd:documentation>Attribute value</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfFrameworkAttributeInterface">
+        <xsd:annotation>
+          <xsd:documentation>An array of FrameworkAttributeInterface items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="tns:FrameworkAttributeInterface">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfFrameworkAttributeInterface.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataAddressInterface">
+        <xsd:annotation>
+          <xsd:documentation>Customer address interface.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="id" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>ID</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="customerId" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Customer ID</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="region" minOccurs="0" maxOccurs="1" type="tns:CustomerDataRegionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Region</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="regionId" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Region ID</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="countryId" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Country code in ISO_3166-2 format</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="street" type="tns:ArrayOfString" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Street</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="company" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Company</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="telephone" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Telephone number</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="fax" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Fax number</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="postcode" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Postcode</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="city" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>City name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="firstname" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>First name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="lastname" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Last name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="middlename" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Middle name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="prefix" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Prefix</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="suffix" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Suffix</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="vatId" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Vat id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="defaultShipping" minOccurs="0" maxOccurs="1" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>If this address is default shipping address.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="defaultBilling" minOccurs="0" maxOccurs="1" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>If this address is default billing address</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="extensionAttributes" minOccurs="0" maxOccurs="1" type="tns:CustomerDataAddressExtensionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Existing extension attributes object or create a new one.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="customAttributes" type="tns:ArrayOfFrameworkAttributeInterface" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Custom attributes values.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerAddressRepositoryV1GetByIdRequest" type="tns:CustomerAddressRepositoryV1GetByIdRequest"/>
+      <xsd:complexType name="CustomerAddressRepositoryV1GetByIdRequest">
+        <xsd:annotation>
+          <xsd:documentation>Retrieve customer address.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="addressId" minOccurs="1" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerAddressRepositoryV1GetByIdResponse" type="tns:CustomerAddressRepositoryV1GetByIdResponse"/>
+      <xsd:complexType name="CustomerAddressRepositoryV1GetByIdResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the customerAddressRepositoryV1GetById call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="result" minOccurs="1" maxOccurs="1" type="tns:CustomerDataAddressInterface">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1GetById</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerAddressRepositoryV1DeleteByIdRequest" type="tns:CustomerAddressRepositoryV1DeleteByIdRequest"/>
+      <xsd:complexType name="CustomerAddressRepositoryV1DeleteByIdRequest">
+        <xsd:annotation>
+          <xsd:documentation>Delete customer address by ID.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="addressId" minOccurs="1" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1DeleteById</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerAddressRepositoryV1DeleteByIdResponse" type="tns:CustomerAddressRepositoryV1DeleteByIdResponse"/>
+      <xsd:complexType name="CustomerAddressRepositoryV1DeleteByIdResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the customerAddressRepositoryV1DeleteById call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="result" minOccurs="1" maxOccurs="1" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>true on success</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>customerAddressRepositoryV1DeleteById</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="GenericFault">
+    <part name="messageParameters" element="tns:GenericFault"/>
+  </message>
+  <portType name="customerAddressRepositoryV1PortType">
+    <operation name="customerAddressRepositoryV1GetById">
+      <input message="tns:customerAddressRepositoryV1GetByIdRequest"/>
+      <output message="tns:customerAddressRepositoryV1GetByIdResponse"/>
+      <fault name="GenericFault" message="tns:GenericFault"/>
+    </operation>
+    <operation name="customerAddressRepositoryV1DeleteById">
+      <input message="tns:customerAddressRepositoryV1DeleteByIdRequest"/>
+      <output message="tns:customerAddressRepositoryV1DeleteByIdResponse"/>
+      <fault name="GenericFault" message="tns:GenericFault"/>
+    </operation>
+  </portType>
+  <binding name="customerAddressRepositoryV1Binding" type="tns:customerAddressRepositoryV1PortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="customerAddressRepositoryV1GetById">
+      <soap12:operation soapAction="customerAddressRepositoryV1GetById"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+      <fault name="GenericFault"/>
+    </operation>
+    <operation name="customerAddressRepositoryV1DeleteById">
+      <soap12:operation soapAction="customerAddressRepositoryV1DeleteById"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+      <fault name="GenericFault"/>
+    </operation>
+  </binding>
+  <service name="customerAddressRepositoryV1Service">
+    <port name="customerAddressRepositoryV1Port" binding="tns:customerAddressRepositoryV1Binding">
+      <soap12:address location="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1"/>
+    </port>
+  </service>
+  <message name="customerAddressRepositoryV1GetByIdRequest">
+    <part name="messageParameters" element="tns:customerAddressRepositoryV1GetByIdRequest"/>
+  </message>
+  <message name="customerAddressRepositoryV1GetByIdResponse">
+    <part name="messageParameters" element="tns:customerAddressRepositoryV1GetByIdResponse"/>
+  </message>
+  <message name="customerAddressRepositoryV1DeleteByIdRequest">
+    <part name="messageParameters" element="tns:customerAddressRepositoryV1DeleteByIdRequest"/>
+  </message>
+  <message name="customerAddressRepositoryV1DeleteByIdResponse">
+    <part name="messageParameters" element="tns:customerAddressRepositoryV1DeleteByIdResponse"/>
+  </message>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1</con:endpoint></con:endpoints><con:operation id="aabbd037-88a5-404a-b760-e17e4662e71d" isOneWay="false" action="customerAddressRepositoryV1DeleteById" name="customerAddressRepositoryV1DeleteById" bindingOperationName="customerAddressRepositoryV1DeleteById" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d10e30ee-5260-453b-9d7b-8ffd9641fe66" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <def:customerAddressRepositoryV1DeleteByIdRequest>\r
+         <addressId>5498</addressId>\r
+      </def:customerAddressRepositoryV1DeleteByIdRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1/customerAddressRepositoryV1PortType/customerAddressRepositoryV1DeleteByIdRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="4423bba1-dc7b-404d-8c12-b9070d8f5761" isOneWay="false" action="customerAddressRepositoryV1GetById" name="customerAddressRepositoryV1GetById" bindingOperationName="customerAddressRepositoryV1GetById" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="936635fa-0529-4306-b8ba-31a134f0f292" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <def:customerAddressRepositoryV1GetByIdRequest>\r
+         <addressId>?</addressId>\r
+      </def:customerAddressRepositoryV1GetByIdRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1/customerAddressRepositoryV1PortType/customerAddressRepositoryV1GetByIdRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="6c766f74-2df3-4b51-93cd-fd19dde6cd50" wsaVersion="NONE" name="customerCustomerRepositoryV1Binding" type="wsdl" bindingName="{http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1}customerCustomerRepositoryV1Binding" soapVersion="1_2" anonymous="optional" definition="file:/C:/Users/KeertiSarode/Documents/Reskill/Files/Project/SOAP%20API%20WSDL%20EndPoints/SOAP%20API%20WSDL%20EndPoints/customerCustomerRepositoryV1.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/KeertiSarode/Documents/Reskill/Files/Project/SOAP%20API%20WSDL%20EndPoints/SOAP%20API%20WSDL%20EndPoints/customerCustomerRepositoryV1.xml"><con:part><con:url>file:/C:/Users/KeertiSarode/Documents/Reskill/Files/Project/SOAP%20API%20WSDL%20EndPoints/SOAP%20API%20WSDL%20EndPoints/customerCustomerRepositoryV1.xml</con:url><con:content><![CDATA[<definitions name="MagentoWSDL" targetNamespace="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <types>
+    <xsd:schema targetNamespace="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+      <xsd:element name="GenericFault" type="tns:GenericFault"/>
+      <xsd:complexType name="GenericFaultParameter">
+        <xsd:sequence>
+          <xsd:element name="key" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="value" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfGenericFaultParameter">
+        <xsd:annotation>
+          <xsd:documentation>An array of GenericFaultParameter items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="tns:GenericFaultParameter">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfGenericFaultParameter.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="WrappedError">
+        <xsd:sequence>
+          <xsd:element name="message" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="parameters" type="tns:ArrayOfGenericFaultParameter" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Message parameters.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfWrappedError">
+        <xsd:annotation>
+          <xsd:documentation>An array of WrappedError items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="tns:WrappedError">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfWrappedError.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GenericFault">
+        <xsd:sequence>
+          <xsd:element name="Trace" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Exception calls stack trace.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="Parameters" type="tns:ArrayOfGenericFaultParameter" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Additional exception parameters.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="WrappedErrors" type="tns:ArrayOfWrappedError" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Additional wrapped errors.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkDataImageContentInterface">
+        <xsd:annotation>
+          <xsd:documentation>Image Content data interface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="base64EncodedData" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Media data (base64 encoded content)</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="type" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>MIME type</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="name" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Image name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataRegionExtensionInterface">
+        <xsd:annotation>
+          <xsd:documentation>ExtensionInterface class for @see \Magento\Customer\Api\Data\RegionInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataRegionInterface">
+        <xsd:annotation>
+          <xsd:documentation>Customer address region interface.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="regionCode" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Region code</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="region" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Region</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="regionId" minOccurs="1" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Region id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="extensionAttributes" minOccurs="0" maxOccurs="1" type="tns:CustomerDataRegionExtensionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Existing extension attributes object or create a new one.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfString">
+        <xsd:annotation>
+          <xsd:documentation>An array of string items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfString.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataAddressExtensionInterface">
+        <xsd:annotation>
+          <xsd:documentation>ExtensionInterface class for @see \Magento\Customer\Api\Data\AddressInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkAttributeInterface">
+        <xsd:annotation>
+          <xsd:documentation>Interface for custom attribute value.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="attributeCode" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Attribute code</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="value" minOccurs="1" maxOccurs="1" type="xsd:anyType">
+            <xsd:annotation>
+              <xsd:documentation>Attribute value</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfFrameworkAttributeInterface">
+        <xsd:annotation>
+          <xsd:documentation>An array of FrameworkAttributeInterface items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="tns:FrameworkAttributeInterface">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfFrameworkAttributeInterface.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataAddressInterface">
+        <xsd:annotation>
+          <xsd:documentation>Customer address interface.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="id" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>ID</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="customerId" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Customer ID</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="region" minOccurs="0" maxOccurs="1" type="tns:CustomerDataRegionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Region</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="regionId" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Region ID</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="countryId" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Country code in ISO_3166-2 format</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="street" type="tns:ArrayOfString" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Street</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="company" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Company</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="telephone" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Telephone number</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="fax" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Fax number</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="postcode" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Postcode</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="city" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>City name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="firstname" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>First name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="lastname" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Last name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="middlename" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Middle name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="prefix" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Prefix</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="suffix" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Suffix</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="vatId" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Vat id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="defaultShipping" minOccurs="0" maxOccurs="1" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>If this address is default shipping address.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:default>false</inf:default>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="defaultBilling" minOccurs="0" maxOccurs="1" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>If this address is default billing address</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:default>false</inf:default>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="extensionAttributes" minOccurs="0" maxOccurs="1" type="tns:CustomerDataAddressExtensionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Existing extension attributes object or create a new one.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="customAttributes" type="tns:ArrayOfFrameworkAttributeInterface" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Custom attributes values.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1GetByIdRequest" type="tns:CustomerCustomerRepositoryV1GetByIdRequest"/>
+      <xsd:complexType name="CustomerCustomerRepositoryV1GetByIdRequest">
+        <xsd:annotation>
+          <xsd:documentation>Get customer by Customer ID.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="customerId" minOccurs="1" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1GetByIdResponse" type="tns:CustomerCustomerRepositoryV1GetByIdResponse"/>
+      <xsd:complexType name="ArrayOfCustomerDataAddressInterface">
+        <xsd:annotation>
+          <xsd:documentation>An array of CustomerDataAddressInterface items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="tns:CustomerDataAddressInterface">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfCustomerDataAddressInterface.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataCustomerExtensionInterface">
+        <xsd:annotation>
+          <xsd:documentation>ExtensionInterface class for @see \Magento\Customer\Api\Data\CustomerInterface</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="isSubscribed" minOccurs="0" maxOccurs="1" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="amazonId" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="vertexCustomerCode" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataCustomerInterface">
+        <xsd:annotation>
+          <xsd:documentation>Customer interface.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="id" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Customer id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="groupId" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Group id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="defaultBilling" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Default billing address id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="defaultShipping" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Default shipping address id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="confirmation" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Confirmation</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="createdAt" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Created at time</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="updatedAt" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Updated at time</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="createdIn" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Created in area</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="dob" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Date of birth</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="email" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Email address</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="firstname" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>First name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="lastname" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Last name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="middlename" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Middle name</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="prefix" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Prefix</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="suffix" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Suffix</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="gender" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Gender</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="storeId" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Store id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="taxvat" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Tax Vat</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="websiteId" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Website id</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="addresses" type="tns:ArrayOfCustomerDataAddressInterface" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Customer addresses.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="disableAutoGroupChange" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Disable auto group change flag.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="extensionAttributes" minOccurs="0" maxOccurs="1" type="tns:CustomerDataCustomerExtensionInterface">
+            <xsd:annotation>
+              <xsd:documentation>Existing extension attributes object or create a new one.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="customAttributes" type="tns:ArrayOfFrameworkAttributeInterface" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Custom attributes values.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerCustomerRepositoryV1GetByIdResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the customerCustomerRepositoryV1GetById call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="result" minOccurs="1" maxOccurs="1" type="tns:CustomerDataCustomerInterface">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetById</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1SaveRequest" type="tns:CustomerCustomerRepositoryV1SaveRequest"/>
+      <xsd:complexType name="CustomerCustomerRepositoryV1SaveRequest">
+        <xsd:annotation>
+          <xsd:documentation>Create or update a customer.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="customer" minOccurs="1" maxOccurs="1" type="tns:CustomerDataCustomerInterface">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="passwordHash" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1SaveResponse" type="tns:CustomerCustomerRepositoryV1SaveResponse"/>
+      <xsd:complexType name="CustomerCustomerRepositoryV1SaveResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the customerCustomerRepositoryV1Save call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="result" minOccurs="1" maxOccurs="1" type="tns:CustomerDataCustomerInterface">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1Save</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1GetListRequest" type="tns:CustomerCustomerRepositoryV1GetListRequest"/>
+      <xsd:complexType name="FrameworkFilter">
+        <xsd:annotation>
+          <xsd:documentation>Filter which can be used by any methods from service layer.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="field" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Field</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="value" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Value</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="conditionType" minOccurs="0" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Condition type</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfFrameworkFilter">
+        <xsd:annotation>
+          <xsd:documentation>An array of FrameworkFilter items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="tns:FrameworkFilter">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfFrameworkFilter.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkSearchFilterGroup">
+        <xsd:annotation>
+          <xsd:documentation>Groups two or more filters together using a logical OR</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="filters" type="tns:ArrayOfFrameworkFilter" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>A list of filters in this group</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfFrameworkSearchFilterGroup">
+        <xsd:annotation>
+          <xsd:documentation>An array of FrameworkSearchFilterGroup items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="tns:FrameworkSearchFilterGroup">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfFrameworkSearchFilterGroup.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkSortOrder">
+        <xsd:annotation>
+          <xsd:documentation>Data object for sort order.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="field" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Sorting field.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="direction" minOccurs="1" maxOccurs="1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Sorting direction.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:maxLength/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfFrameworkSortOrder">
+        <xsd:annotation>
+          <xsd:documentation>An array of FrameworkSortOrder items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="tns:FrameworkSortOrder">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfFrameworkSortOrder.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FrameworkSearchCriteriaInterface">
+        <xsd:annotation>
+          <xsd:documentation>Search criteria interface.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="filterGroups" type="tns:ArrayOfFrameworkSearchFilterGroup">
+            <xsd:annotation>
+              <xsd:documentation>A list of filter groups.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="sortOrders" type="tns:ArrayOfFrameworkSortOrder" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Sort order.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="pageSize" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Page size.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="currentPage" minOccurs="0" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Current page.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>No</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerCustomerRepositoryV1GetListRequest">
+        <xsd:annotation>
+          <xsd:documentation>Retrieve customers which match a specified criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#CustomerRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="searchCriteria" minOccurs="1" maxOccurs="1" type="tns:FrameworkSearchCriteriaInterface">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1GetListResponse" type="tns:CustomerCustomerRepositoryV1GetListResponse"/>
+      <xsd:complexType name="ArrayOfCustomerDataCustomerInterface">
+        <xsd:annotation>
+          <xsd:documentation>An array of CustomerDataCustomerInterface items.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" type="tns:CustomerDataCustomerInterface">
+            <xsd:annotation>
+              <xsd:documentation>An item of ArrayOfCustomerDataCustomerInterface.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:returned>Conditionally</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerDataCustomerSearchResultsInterface">
+        <xsd:annotation>
+          <xsd:documentation>Interface for customer search results.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="items" type="tns:ArrayOfCustomerDataCustomerInterface">
+            <xsd:annotation>
+              <xsd:documentation>Customers list.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:natureOfType>array</inf:natureOfType>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="searchCriteria" minOccurs="1" maxOccurs="1" type="tns:FrameworkSearchCriteriaInterface">
+            <xsd:annotation>
+              <xsd:documentation>Search criteria.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="totalCount" minOccurs="1" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Total count.</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerCustomerRepositoryV1GetListResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the customerCustomerRepositoryV1GetList call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="result" minOccurs="1" maxOccurs="1" type="tns:CustomerDataCustomerSearchResultsInterface">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1GetList</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1DeleteByIdRequest" type="tns:CustomerCustomerRepositoryV1DeleteByIdRequest"/>
+      <xsd:complexType name="CustomerCustomerRepositoryV1DeleteByIdRequest">
+        <xsd:annotation>
+          <xsd:documentation>Delete customer by Customer ID.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="customerId" minOccurs="1" maxOccurs="1" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation/>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:min/>
+                <inf:max/>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1DeleteById</inf:callName>
+                  <inf:requiredInput>Yes</inf:requiredInput>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="customerCustomerRepositoryV1DeleteByIdResponse" type="tns:CustomerCustomerRepositoryV1DeleteByIdResponse"/>
+      <xsd:complexType name="CustomerCustomerRepositoryV1DeleteByIdResponse">
+        <xsd:annotation>
+          <xsd:documentation>Response container for the customerCustomerRepositoryV1DeleteById call.</xsd:documentation>
+          <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="result" minOccurs="1" maxOccurs="1" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>true on success</xsd:documentation>
+              <xsd:appinfo xmlns:inf="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+                <inf:default>false</inf:default>
+                <inf:callInfo>
+                  <inf:callName>customerCustomerRepositoryV1DeleteById</inf:callName>
+                  <inf:returned>Always</inf:returned>
+                </inf:callInfo>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="GenericFault">
+    <part name="messageParameters" element="tns:GenericFault"/>
+  </message>
+  <portType name="customerCustomerRepositoryV1PortType">
+    <operation name="customerCustomerRepositoryV1GetById">
+      <input message="tns:customerCustomerRepositoryV1GetByIdRequest"/>
+      <output message="tns:customerCustomerRepositoryV1GetByIdResponse"/>
+      <fault name="GenericFault" message="tns:GenericFault"/>
+    </operation>
+    <operation name="customerCustomerRepositoryV1Save">
+      <input message="tns:customerCustomerRepositoryV1SaveRequest"/>
+      <output message="tns:customerCustomerRepositoryV1SaveResponse"/>
+      <fault name="GenericFault" message="tns:GenericFault"/>
+    </operation>
+    <operation name="customerCustomerRepositoryV1GetList">
+      <input message="tns:customerCustomerRepositoryV1GetListRequest"/>
+      <output message="tns:customerCustomerRepositoryV1GetListResponse"/>
+      <fault name="GenericFault" message="tns:GenericFault"/>
+    </operation>
+    <operation name="customerCustomerRepositoryV1DeleteById">
+      <input message="tns:customerCustomerRepositoryV1DeleteByIdRequest"/>
+      <output message="tns:customerCustomerRepositoryV1DeleteByIdResponse"/>
+      <fault name="GenericFault" message="tns:GenericFault"/>
+    </operation>
+  </portType>
+  <binding name="customerCustomerRepositoryV1Binding" type="tns:customerCustomerRepositoryV1PortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="customerCustomerRepositoryV1GetById">
+      <soap12:operation soapAction="customerCustomerRepositoryV1GetById"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+      <fault name="GenericFault"/>
+    </operation>
+    <operation name="customerCustomerRepositoryV1Save">
+      <soap12:operation soapAction="customerCustomerRepositoryV1Save"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+      <fault name="GenericFault"/>
+    </operation>
+    <operation name="customerCustomerRepositoryV1GetList">
+      <soap12:operation soapAction="customerCustomerRepositoryV1GetList"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+      <fault name="GenericFault"/>
+    </operation>
+    <operation name="customerCustomerRepositoryV1DeleteById">
+      <soap12:operation soapAction="customerCustomerRepositoryV1DeleteById"/>
+      <input>
+        <soap12:body use="literal"/>
+      </input>
+      <output>
+        <soap12:body use="literal"/>
+      </output>
+      <fault name="GenericFault"/>
+    </operation>
+  </binding>
+  <service name="customerCustomerRepositoryV1Service">
+    <port name="customerCustomerRepositoryV1Port" binding="tns:customerCustomerRepositoryV1Binding">
+      <soap12:address location="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1"/>
+    </port>
+  </service>
+  <message name="customerCustomerRepositoryV1GetByIdRequest">
+    <part name="messageParameters" element="tns:customerCustomerRepositoryV1GetByIdRequest"/>
+  </message>
+  <message name="customerCustomerRepositoryV1GetByIdResponse">
+    <part name="messageParameters" element="tns:customerCustomerRepositoryV1GetByIdResponse"/>
+  </message>
+  <message name="customerCustomerRepositoryV1SaveRequest">
+    <part name="messageParameters" element="tns:customerCustomerRepositoryV1SaveRequest"/>
+  </message>
+  <message name="customerCustomerRepositoryV1SaveResponse">
+    <part name="messageParameters" element="tns:customerCustomerRepositoryV1SaveResponse"/>
+  </message>
+  <message name="customerCustomerRepositoryV1GetListRequest">
+    <part name="messageParameters" element="tns:customerCustomerRepositoryV1GetListRequest"/>
+  </message>
+  <message name="customerCustomerRepositoryV1GetListResponse">
+    <part name="messageParameters" element="tns:customerCustomerRepositoryV1GetListResponse"/>
+  </message>
+  <message name="customerCustomerRepositoryV1DeleteByIdRequest">
+    <part name="messageParameters" element="tns:customerCustomerRepositoryV1DeleteByIdRequest"/>
+  </message>
+  <message name="customerCustomerRepositoryV1DeleteByIdResponse">
+    <part name="messageParameters" element="tns:customerCustomerRepositoryV1DeleteByIdResponse"/>
+  </message>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1</con:endpoint></con:endpoints><con:operation id="bd8ebf5c-78bf-41a2-a978-b94ae622d0be" isOneWay="false" action="customerCustomerRepositoryV1DeleteById" name="customerCustomerRepositoryV1DeleteById" bindingOperationName="customerCustomerRepositoryV1DeleteById" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="784f71db-38aa-4aba-916c-c24853e2ef40" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <def:customerCustomerRepositoryV1DeleteByIdRequest>\r
+         <customerId>7463</customerId>\r
+      </def:customerCustomerRepositoryV1DeleteByIdRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1/customerCustomerRepositoryV1PortType/customerCustomerRepositoryV1DeleteByIdRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="d9f69ce5-ad65-4b50-bc17-06980ac4a59d" isOneWay="false" action="customerCustomerRepositoryV1GetById" name="customerCustomerRepositoryV1GetById" bindingOperationName="customerCustomerRepositoryV1GetById" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b7ea8ccb-1320-4198-b8bf-dd70e5287b91" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <def:customerCustomerRepositoryV1GetByIdRequest>\r
+         <customerId>7463</customerId>\r
+      </def:customerCustomerRepositoryV1GetByIdRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1/customerCustomerRepositoryV1PortType/customerCustomerRepositoryV1GetByIdRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1e7d12ae-633c-4f3b-9430-b6463832c809" isOneWay="false" action="customerCustomerRepositoryV1GetList" name="customerCustomerRepositoryV1GetList" bindingOperationName="customerCustomerRepositoryV1GetList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1d0c467c-be5c-4cb5-a2cb-a61ab40e8460" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <def:customerCustomerRepositoryV1GetListRequest>\r
+         <searchCriteria>\r
+            <filterGroups>\r
+               <!--Zero or more repetitions:-->\r
+               <item>\r
+                  <!--Optional:-->\r
+                  <filters>\r
+                     <!--Zero or more repetitions:-->\r
+                     <item>\r
+                        <field>?</field>\r
+                        <value>?</value>\r
+                        <!--Optional:-->\r
+                        <conditionType>?</conditionType>\r
+                     </item>\r
+                  </filters>\r
+               </item>\r
+            </filterGroups>\r
+            <!--Optional:-->\r
+            <sortOrders>\r
+               <!--Zero or more repetitions:-->\r
+               <item>\r
+                  <field>?</field>\r
+                  <direction>?</direction>\r
+               </item>\r
+            </sortOrders>\r
+            <!--Optional:-->\r
+            <pageSize>?</pageSize>\r
+            <!--Optional:-->\r
+            <currentPage>?</currentPage>\r
+         </searchCriteria>\r
+      </def:customerCustomerRepositoryV1GetListRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1/customerCustomerRepositoryV1PortType/customerCustomerRepositoryV1GetListRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="b4a4192c-d936-4663-89c5-a1e17bdc39df" isOneWay="false" action="customerCustomerRepositoryV1Save" name="customerCustomerRepositoryV1Save" bindingOperationName="customerCustomerRepositoryV1Save" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c35836fb-b4d5-4aed-b3a8-8e9527d4abb2" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <def:customerCustomerRepositoryV1SaveRequest>\r
+         <customer>\r
+            <email>KeertiSarode205@gmail.com</email>\r
+            <firstname>Keerti</firstname>\r
+            <lastname>Sarode</lastname>\r
+            <dob>1994-05-19</dob>\r
+       
+         </customer>\r
+         <!--Optional:-->\r
+         <passwordHash>?</passwordHash>\r
+      </def:customerCustomerRepositoryV1SaveRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>false</con:preemptive><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1/customerCustomerRepositoryV1PortType/customerCustomerRepositoryV1SaveRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="2d6f7506-52ef-4801-8b02-df62cd4bed08" name="Customer Service Functional Testing"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="c4118738-d707-4664-9580-9e4a67afe433" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Traditional Customer Property Transfer" searchProperties="true"><con:settings/><con:testStep type="properties" name="Customer Creation Properties" id="d41b0ae8-ae0c-40df-8065-406c17cd89b2"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>email</con:name><con:value>sonukeerthi31@gmail.com</con:value></con:property><con:property><con:name>firstname</con:name><con:value>Keerti</con:value></con:property><con:property><con:name>lastname</con:name><con:value>Sarode</con:value></con:property><con:property><con:name>dob</con:name><con:value>1994-05-19</con:value></con:property><con:property><con:name>regionCode</con:name><con:value>KA</con:value></con:property><con:property><con:name>region</con:name><con:value>Karnataka</con:value></con:property><con:property><con:name>countryId</con:name><con:value>IN</con:value></con:property><con:property><con:name>item</con:name><con:value>#55, 1 st Main Road</con:value></con:property><con:property><con:name>telephone</con:name><con:value>9164311300</con:value></con:property><con:property><con:name>postcode</con:name><con:value>560023</con:value></con:property><con:property><con:name>city</con:name><con:value>Bengaluru</con:value></con:property><con:property><con:name>defaultShipping</con:name><con:value>true</con:value></con:property><con:property><con:name>defaultBilling</con:name><con:value>true</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="3ad4ff38-6b6b-47db-bb92-b8d4628234f7"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>emailId</con:name><con:sourceType>email</con:sourceType><con:sourceStep>Customer Creation Properties</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create Customer</con:targetStep><con:targetPath>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1';
+
+//*:email
+</con:targetPath><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>firstname</con:name><con:sourceType>firstname</con:sourceType><con:sourceStep>Customer Creation Properties</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create Customer</con:targetStep><con:targetPath>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1';
+
+//*:firstname
+</con:targetPath><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>lastname</con:name><con:sourceType>lastname</con:sourceType><con:sourceStep>Customer Creation Properties</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create Customer</con:targetStep><con:targetPath>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1';
+
+//*:lastname</con:targetPath><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>dob</con:name><con:sourceType>dob</con:sourceType><con:sourceStep>Customer Creation Properties</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create Customer</con:targetStep><con:targetPath>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1';
+
+//*:dob
+</con:targetPath><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>fname</con:name><con:sourceType>firstname</con:sourceType><con:sourceStep>Customer Creation Properties</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create Customer</con:targetStep><con:targetPath>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1';
+
+//customer/addresses/item/firstname
+</con:targetPath><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>lname</con:name><con:sourceType>lastname</con:sourceType><con:sourceStep>Customer Creation Properties</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create Customer</con:targetStep><con:targetPath>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1';
+
+//customer/addresses/item/lastname
+</con:targetPath><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="Create Customer" id="631bbdff-7d2b-4ef6-af21-697ecce6072a"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>customerCustomerRepositoryV1Binding</con:interface><con:operation>customerCustomerRepositoryV1Save</con:operation><con:request name="Create Customer" id="11b306bb-dff4-41fc-a1bb-05e31bd69f87"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+   <soap:Header/>
+   <soap:Body>
+      <def:customerCustomerRepositoryV1SaveRequest>
+         <customer>
+            <email>sonukeerthi31@gmail.com</email>
+            <firstname>Keerti</firstname>
+            <lastname>Sarode</lastname>
+            <dob>1994-05-19</dob>
+            <addresses>
+               <item>
+                  <region>
+                     <regionCode>KA</regionCode>
+                     <region>Karnataka</region>
+                  </region>
+                  <countryId>IN</countryId>
+                  <street>
+                     <item>#55, 1 st Main Road</item>
+                  </street>
+                  <telephone>+91 9876543210</telephone>
+                  <postcode>560023</postcode>
+                  <city>Bengaluru</city>
+                  <firstname>Keerti</firstname>
+                  <lastname>Sarode</lastname>
+                  <defaultShipping>true</defaultShipping>
+                  <defaultBilling>true</defaultBilling>
+               </item>
+            </addresses>
+         </customer>
+         <!--Optional:-->
+         <passwordHash>?</passwordHash>
+      </def:customerCustomerRepositoryV1SaveRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4f8dd072-cd26-4527-8859-5a96d1226c04"/><con:assertion type="GroovyScriptAssertion" id="ef8a29a5-a517-4783-b2ae-908697183953" name="Script Assertion"><con:configuration><scriptText>// to fetch the customerid and store it in custom properties.
+import com.eviware.soapui.support.XmlHolder
+def resp= context.testCase.testSteps['Create Customer'].getPropertyValue('Response')
+
+log.info resp
+def holder = new XmlHolder(resp)
+def customerId= holder.getNodeValue("//*:id")
+context.testCase.setPropertyValue("customerId",customerId)</scriptText></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="CustomerID transfer" id="c83ee853-890b-480a-a492-01dd3fe72501"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>id</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Create Customer</con:sourceStep><con:sourcePath>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1';
+//*:id
+</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>Retrieve Customer</con:targetStep><con:targetPath>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1';
+//*:customerId</con:targetPath><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>id1</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Create Customer</con:sourceStep><con:sourcePath>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1';
+
+//*:id
+</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>Delete Customer</con:targetStep><con:targetPath>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1';
+
+//*:customerId
+</con:targetPath><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="Retrieve Customer" id="b7272d60-4e39-4033-abbe-9c381845916a"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>customerCustomerRepositoryV1Binding</con:interface><con:operation>customerCustomerRepositoryV1GetById</con:operation><con:request name="Retrieve Customer" id="66f0eda4-6705-4d1c-be22-91791c786e77"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+   <soap:Header/>
+   <soap:Body>
+      <def:customerCustomerRepositoryV1GetByIdRequest>
+         <customerId/>
+      </def:customerCustomerRepositoryV1GetByIdRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c2e3c9c0-4312-42ba-b93f-cf86c363217e"/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Delete Customer" id="8bb16548-ae0c-4b28-bd8a-f76a28f42006"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>customerCustomerRepositoryV1Binding</con:interface><con:operation>customerCustomerRepositoryV1DeleteById</con:operation><con:request name="Delete Customer" id="b72e2a6f-6643-4c82-95c7-bc99982b381b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+   <soap:Header/>
+   <soap:Body>
+      <def:customerCustomerRepositoryV1DeleteByIdRequest>
+         <customerId/>
+      </def:customerCustomerRepositoryV1DeleteByIdRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="ab0d4f9b-bbf3-4d8c-96e4-542d395bd79a"/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>customerId</con:name><con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:property></con:properties><con:reportParameters/></con:testCase><con:testCase id="f95bf14e-b3ed-4ac8-ada2-badc407ebcff" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="PropertyExpansion" searchProperties="true"><con:settings/><con:testStep type="properties" name="Customer Creation Properties" id="07788a4a-92a6-4940-9281-af7223cb133d"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>email</con:name><con:value>Keerti${=String.valueOf(Math.random()*1000).substring(0,5)}@gmail.com</con:value></con:property><con:property><con:name>firstname</con:name><con:value>Keerti</con:value></con:property><con:property><con:name>lastname</con:name><con:value>Sarode</con:value></con:property><con:property><con:name>dob</con:name><con:value>1994-05-19</con:value></con:property><con:property><con:name>countryId</con:name><con:value>IN</con:value></con:property><con:property><con:name>item</con:name><con:value>#55, 1 st Main Road</con:value></con:property><con:property><con:name>telephone</con:name><con:value>9164311300</con:value></con:property><con:property><con:name>city</con:name><con:value>Bengaluru</con:value></con:property><con:property><con:name>defaultShipping</con:name><con:value>true</con:value></con:property><con:property><con:name>defaultBilling</con:name><con:value>true</con:value></con:property><con:property><con:name>postcode</con:name><con:value/></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Script1" id="f9e6de60-a5d8-40ec-afa9-0a7a1fea8a87"><con:settings/><con:config><script>//if address is present in create customer goto search by addressID else restireveCustomer details by customerID
+def postcode = context.expand('${Customer Creation Properties#postcode}')
+log.info "$postcode"
+
+if(postcode!="")
+{
+    log.info "Address is available for customer"
+    
+    testRunner.gotoStepbyName("Create Customer with Address")
+   
+}
+else
+{
+    log.info "Address is not available for customer"
+    testRunner.gotoStepByName("Create Customer without Address")
+}</script></con:config></con:testStep><con:testStep type="request" name="Create Customer with Address" id="abb6dbcc-393f-4f88-8846-711a1bfc7517"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>customerCustomerRepositoryV1Binding</con:interface><con:operation>customerCustomerRepositoryV1Save</con:operation><con:request name="Create Customer with Address" id="11b306bb-dff4-41fc-a1bb-05e31bd69f87"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+   <soap:Header/>
+   <soap:Body>
+      <def:customerCustomerRepositoryV1SaveRequest>
+         <customer>
+            <email>${Customer Creation Properties#email}</email>
+            <firstname>${Customer Creation Properties#firstname}</firstname>
+            <lastname>${Customer Creation Properties#lastname}</lastname>
+            <dob>${Customer Creation Properties#dob}</dob>
+            <addresses>
+               <item>
+                  <region>
+                     <regionCode>KA</regionCode>
+                     <region>Karnataka</region>
+                  </region>
+                  <countryId>${Customer Creation Properties#countryId}</countryId>
+                  <street>
+                     <item>#55, 1 st Main Road</item>
+                  </street>
+                  <telephone>${Customer Creation Properties#telephone}</telephone>
+                  <postcode>${Customer Creation Properties#postcode}</postcode>
+                  <city>${Customer Creation Properties#city}</city>
+                  <firstname>${Customer Creation Properties#firstname}</firstname>
+                  <lastname>${Customer Creation Properties#lastname}</lastname>
+                  <defaultShipping>${Customer Creation Properties#defaultShipping}</defaultShipping>
+                  <defaultBilling>${Customer Creation Properties#defaultBilling}</defaultBilling>
+               </item>
+            </addresses>
+         </customer>
+         <!--Optional:-->
+         <passwordHash>?</passwordHash>
+      </def:customerCustomerRepositoryV1SaveRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4f8dd072-cd26-4527-8859-5a96d1226c04"/><con:assertion type="GroovyScriptAssertion" id="ef8a29a5-a517-4783-b2ae-908697183953" name="Script Assertion"><con:configuration><scriptText>// to fetch the customerid and store it in custom properties.
+import com.eviware.soapui.support.XmlHolder
+def respo= context.testCase.testSteps['Create Customer with Address'].getPropertyValue('Response')
+
+log.info respo
+def holder = new XmlHolder(respo)
+def customerId= holder.getNodeValue("//*:id")
+context.testCase.setPropertyValue("customerId",customerId)
+
+def holder1 = new XmlHolder(respo)
+def addressId=holder1.getNodeValue("//result/addresses/item/id")
+context.testCase.setPropertyValue("addressId",addressId)</scriptText></con:configuration></con:assertion><con:assertion type="XPath Match" id="17004165-9511-432c-aff1-6fb3a56ca825" name="XPath Match"><con:configuration/></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Script2" id="ea79b82e-e8ae-4f6c-8a07-abed319a602e"><con:settings/><con:config><script>//if address is present in create customer goto search by addressID else restireveCustomer details by customerID
+def defaultBilling = context.expand('${Create Customer with Address#Response#//*:defaultBilling}')
+
+log.info "$defaultBilling"
+def addressId =testRunner.testCase.getPropertyValue("addressId")
+log.info "$addressId"
+if("$defaultBilling"!="$addressId")
+{
+    log.info "Address is not available for customer"
+    
+    testRunner.gotoStepByName("Retrieve by CustomerId")
+}
+else
+{
+    log.info "addressId is $defaultBilling"
+    testRunner.gotoStepByName("Retrieve by AddressId")
+}</script></con:config></con:testStep><con:testStep type="request" name="Create Customer without Address" id="28b77ba3-43db-4b6f-985f-894f12dfa2d9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>customerCustomerRepositoryV1Binding</con:interface><con:operation>customerCustomerRepositoryV1Save</con:operation><con:request name="Create Customer without Address" id="11b306bb-dff4-41fc-a1bb-05e31bd69f87"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+   <soap:Header/>
+   <soap:Body>
+      <def:customerCustomerRepositoryV1SaveRequest>
+         <customer>
+            <email>${Customer Creation Properties#email}</email>
+            <firstname>${Customer Creation Properties#firstname}</firstname>
+            <lastname>${Customer Creation Properties#lastname}</lastname>
+            <dob>${Customer Creation Properties#dob}</dob>
+           
+         </customer>
+         <!--Optional:-->
+         <passwordHash>?</passwordHash>
+      </def:customerCustomerRepositoryV1SaveRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4f8dd072-cd26-4527-8859-5a96d1226c04"/><con:assertion type="GroovyScriptAssertion" id="ef8a29a5-a517-4783-b2ae-908697183953" name="Script Assertion"><con:configuration><scriptText>// to fetch the customerid and store it in custom properties.
+import com.eviware.soapui.support.XmlHolder
+def resp= context.testCase.testSteps['Create Customer without Address'].getPropertyValue('Response')
+
+log.info resp
+def holder = new XmlHolder(resp)
+def customerId= holder.getNodeValue("//*:id")
+context.testCase.setPropertyValue("customerId",customerId)
+</scriptText></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Script3" id="2bfd7df8-f5b5-4812-9c9a-b4e8d49dced8"><con:settings/><con:config><script>//if address is present in create customer goto search by addressID else restireveCustomer details by customerID
+def defaultBilling = context.expand('${Create Customer without Address#Response#//*:defaultBilling}')
+
+log.info "$defaultBilling"
+def addressId =testRunner.testCase.getPropertyValue("addressId")
+log.info "$addressId"
+if("$defaultBilling"!="$addressId")
+{
+    log.info "Address is not available for customer"
+    
+    testRunner.gotoStepByName("Retrieve by CustomerId")
+}
+else
+{
+    log.info "addressId is $defaultBilling"
+    testRunner.gotoStepByName("Retrieve by AddressId")
+}</script></con:config></con:testStep><con:testStep type="request" name="Retrieve by AddressId" id="a278d978-5442-4069-ab70-90ee8b772b31"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>customerAddressRepositoryV1Binding</con:interface><con:operation>customerAddressRepositoryV1GetById</con:operation><con:request name="Retrieve by AddressId" id="6726d119-ea79-4cac-a532-da2e95e71e29"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerAddressRepositoryV1">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <def:customerAddressRepositoryV1GetByIdRequest>\r
+         <addressId>${#TestCase#addressId}</addressId>\r
+      </def:customerAddressRepositoryV1GetByIdRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="bc975b2c-bbd0-4535-abfa-e062d47f8ecf"/><con:assertion type="Schema Compliance" id="b4882ec1-d2ba-4e15-b704-c08b2ba0bf8c"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="de7cd5e5-0da7-4eee-939a-e82eb9babd72"/><con:assertion type="GroovyScriptAssertion" id="646c0eed-f9f3-4f39-9566-01ff7b221bc6" name="Script Assertion"><con:configuration><scriptText>def headers =  messageExchange.getResponseHeaders()
+log.info headers["#status#"]
+assert ['HTTP/1.1 200 OK'] == headers["#status#"]
+
+log.info "Script Assertion Passed"</scriptText></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Script4" id="229293d0-336d-46f9-a1d2-645df91be654"><con:settings/><con:config><script>//if customer search is successful using addressId ,goto deleteCustomer
+def id = context.expand('${Retrieve by AddressId#Response#//*:id}')
+
+log.info "$id"
+def addressId =testRunner.testCase.getPropertyValue("addressId")
+log.info "$addressId"
+if("$id"!="$addressId")
+{
+    log.info "Address is not available for customer"
+    
+    testRunner.gotoStepByName("Retrieve by CustomerId")
+}
+else
+{
+    log.info "addressId is $id"
+    testRunner.gotoStepByName("Delete Customer")
+}</script></con:config></con:testStep><con:testStep type="request" name="Retrieve by CustomerId" id="4eaa8f2f-6904-47fc-a06d-6b572ed3b49c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>customerCustomerRepositoryV1Binding</con:interface><con:operation>customerCustomerRepositoryV1GetById</con:operation><con:request name="Retrieve by CustomerId" id="66f0eda4-6705-4d1c-be22-91791c786e77"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+   <soap:Header/>
+   <soap:Body>
+      <def:customerCustomerRepositoryV1GetByIdRequest>
+         <customerId>${#TestCase#customerId}</customerId>
+      </def:customerCustomerRepositoryV1GetByIdRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c2e3c9c0-4312-42ba-b93f-cf86c363217e"/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Delete Customer" id="48f3450f-0445-4491-92e1-5105128a6b88"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>customerCustomerRepositoryV1Binding</con:interface><con:operation>customerCustomerRepositoryV1DeleteById</con:operation><con:request name="Delete Customer" id="d36f2571-6751-40be-a9c6-a8dd226a00f3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <def:customerCustomerRepositoryV1DeleteByIdRequest>\r
+         <customerId>${#TestCase#customerId}</customerId>\r
+      </def:customerCustomerRepositoryV1DeleteByIdRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="829710b2-e812-450c-9dbf-55a263e710b0"/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>customerId</con:name><con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">8208</con:value></con:property><con:property><con:name>addressId</con:name><con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">5590</con:value></con:property></con:properties><con:reportParameters/></con:testCase><con:properties><con:property><con:name>Authorization</con:name><con:value>Bearer f0rf13pxtxp7mftwc23rq6e52yvmi5um</con:value></con:property></con:properties><con:setupScript/><con:reportParameters/></con:testSuite><con:properties><con:property><con:name>Authorization</con:name><con:value>Bearer f0rf13pxtxp7mftwc23rq6e52yvmi5um</con:value></con:property></con:properties><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/><con:authRepository/><con:tags/></con:soapui-project>

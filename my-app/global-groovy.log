@@ -1,0 +1,41 @@
+2021-05-31 14:38:46,319 INFO  [log] <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+   <env:Body>
+      <env:Fault>
+         <env:Code>
+            <env:Value>env:Sender</env:Value>
+         </env:Code>
+         <env:Reason>
+            <env:Text xml:lang="en">A customer with the same email address already exists in an associated website.</env:Text>
+         </env:Reason>
+      </env:Fault>
+   </env:Body>
+</env:Envelope>
+2021-05-31 14:38:47,769 INFO  [log] 
+2021-05-31 14:38:47,774 INFO  [log] Address is not available for customer
+2021-05-31 14:38:48,628 INFO  [log] <env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:ns1="http://soap.upskills.in/soap/default?services=customerCustomerRepositoryV1">
+   <env:Body>
+      <ns1:customerCustomerRepositoryV1SaveResponse>
+         <result>
+            <id>8475</id>
+            <groupId>1</groupId>
+            <createdAt>2021-05-31 09:08:47</createdAt>
+            <updatedAt>2021-05-31 09:08:47</updatedAt>
+            <createdIn>Default Store View</createdIn>
+            <dob>1994-05-19</dob>
+            <email>Keerti869.2@gmail.com</email>
+            <firstname>Keerti</firstname>
+            <lastname>Sarode</lastname>
+            <storeId>1</storeId>
+            <websiteId>1</websiteId>
+            <addresses/>
+            <disableAutoGroupChange>0</disableAutoGroupChange>
+            <extensionAttributes>
+               <isSubscribed>false</isSubscribed>
+            </extensionAttributes>
+         </result>
+      </ns1:customerCustomerRepositoryV1SaveResponse>
+   </env:Body>
+</env:Envelope>
+2021-05-31 14:38:48,671 INFO  [log] 
+2021-05-31 14:38:48,672 INFO  [log] 5590
+2021-05-31 14:38:48,675 INFO  [log] Address is not available for customer
